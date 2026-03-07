@@ -14,6 +14,9 @@ const PasteSection = ({ placeholder, value, onChange, onDetect }: Props) => (
       <ClipboardPaste className="w-5 h-5 text-primary" />
       Pegar datos del panel
     </h2>
+    <p className="text-sm text-muted-foreground mb-3">
+      Para este demo ya cargamos datos de ejemplo. No necesitas pegar nada. Solo presiona 'Detectar cuentas próximas a vencer'.
+    </p>
     <textarea
       className="w-full min-h-[180px] rounded-xl border border-input bg-card p-4 font-mono text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
       placeholder={placeholder}
