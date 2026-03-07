@@ -14,7 +14,7 @@ const DetectedUsers = ({ users }: { users: User[] }) => (
       Clientes próximos a vencer
     </h2>
     <p className="text-sm font-medium text-muted-foreground mb-3">
-      {users.length} {users.length === 1 ? "cliente necesita" : "clientes necesitan"} recordatorio hoy
+      {users.length} {users.length === 1 ? "cliente necesita" : "clientes necesitan"} recordatorio
     </p>
     <div className="space-y-3">
       {users.map((u) => (
