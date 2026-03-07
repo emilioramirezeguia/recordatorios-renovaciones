@@ -62,7 +62,7 @@ const WhatsAppReminders = ({ users, demoPhoneNumber }: { users: User[]; demoPhon
                   >
                     <span className="font-medium text-foreground">{c.nombre}</span>
                     <a
-                      href={demoPhoneNumber.trim() ? `https://wa.me/${demoPhoneNumber.trim()}?text=${msg}` : "#"}
+                      href={demoPhoneNumber.trim() ? `https://wa.me/52${demoPhoneNumber.trim()}?text=${msg}` : "#"}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={handleClick}

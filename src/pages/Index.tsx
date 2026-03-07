@@ -59,14 +59,15 @@ const Index = () => {
             Ingresa tu número de WhatsApp para probar cómo se abrirían los recordatorios.
           </p>
           <Label htmlFor="demo-phone" className="text-sm font-medium text-foreground">
-            Tu número de WhatsApp
+            Tu número de WhatsApp (10 dígitos)
           </Label>
           <Input
             id="demo-phone"
             className="mt-1.5"
-            placeholder="Ej: 526641234567"
+            placeholder="Ej: 6641234567"
+            maxLength={10}
             value={demoPhoneNumber}
-            onChange={(e) => setDemoPhoneNumber(e.target.value)}
+            onChange={(e) => setDemoPhoneNumber(e.target.value.replace(/\D/g, ""))}
           />
           <p className="mt-2 text-xs text-muted-foreground">
             Este demo abrirá WhatsApp con un mensaje de ejemplo.
