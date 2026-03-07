@@ -10,7 +10,7 @@ interface User {
   telefono: string;
 }
 
-const WhatsAppReminders = ({ users }: { users: User[] }) => {
+const WhatsAppReminders = ({ users }: {users: User[];}) => {
   const grouped = users.reduce<Record<string, User[]>>((acc, u) => {
     (acc[u.whatsapp] ||= []).push(u);
     return acc;
@@ -23,42 +23,42 @@ const WhatsAppReminders = ({ users }: { users: User[] }) => {
         Enviar recordatorios por WhatsApp
       </h2>
       <div className="space-y-4">
-        {Object.entries(grouped).map(([wa, clients]) => (
-          <div key={wa} className="rounded-xl border border-border bg-card p-4">
+        {Object.entries(grouped).map(([wa, clients]) =>
+        <div key={wa} className="rounded-xl border border-border bg-card p-4">
             <p className="text-sm font-semibold text-muted-foreground mb-3">{wa}</p>
             {clients.map((c) => {
-              const msg = encodeURIComponent(
-                `Hola ${c.nombre}, tu suscripción IPTV vence ${c.diasRestantes === 1 ? "mañana" : `en ${c.diasRestantes} días`} (${c.vencimiento}). ¿Deseas renovar?`
-              );
-              return (
-                <div
-                  key={c.usuario}
-                  className="flex items-center justify-between gap-3 py-2 border-t border-border first:border-0 first:pt-0"
-                >
+            const msg = encodeURIComponent(
+              `Hola ${c.nombre}, tu suscripción IPTV vence ${c.diasRestantes === 1 ? "mañana" : `en ${c.diasRestantes} días`} (${c.vencimiento}). ¿Deseas renovar?`
+            );
+            return (
+              <div
+                key={c.usuario}
+                className="flex items-center justify-between gap-3 py-2 border-t border-border first:border-0 first:pt-0">
+                
                   <span className="font-medium text-foreground">{c.nombre}</span>
                   <a
-                    href={`https://wa.me/${c.telefono}?text=${msg}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  href={`https://wa.me/${c.telefono}?text=${msg}`}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  
                     <Button
-                      size="sm"
-                      className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold"
-                    >
+                    size="sm"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold">
+                    
                       Abrir WhatsApp
                     </Button>
                   </a>
-                </div>
-              );
-            })}
+                </div>);
+
+          })}
           </div>
-        ))}
+        )}
       </div>
-      <p className="mt-6 text-center text-xs text-muted-foreground">
-        Demo visual — no es una automatización real
-      </p>
-    </section>
-  );
+      
+
+      
+    </section>);
+
 };
 
 export default WhatsAppReminders;
