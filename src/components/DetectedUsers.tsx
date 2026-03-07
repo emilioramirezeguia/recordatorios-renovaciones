@@ -11,10 +11,10 @@ const DetectedUsers = ({ users }: { users: User[] }) => (
   <section className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
     <h2 className="text-lg font-semibold mb-2 flex items-center gap-2 text-foreground">
       <AlertTriangle className="w-5 h-5 text-accent" />
-      Cuentas próximas a vencer
+      Clientes próximos a vencer
     </h2>
     <p className="text-sm font-medium text-muted-foreground mb-3">
-      {users.length} {users.length === 1 ? "cliente necesita" : "clientes necesitan"} recordatorio
+      {users.length} {users.length === 1 ? "cliente necesita" : "clientes necesitan"} recordatorio hoy
     </p>
     <div className="space-y-3">
       {users.map((u) => (
