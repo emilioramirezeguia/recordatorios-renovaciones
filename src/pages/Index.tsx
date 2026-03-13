@@ -59,7 +59,7 @@ const Index = () => {
             <span className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-muted-foreground">Demo</span>
           </div>
           <p className="text-base text-muted-foreground mt-1">Gestiona vencimientos de pago y envía avisos de renovación por WhatsApp en segundos.</p>
-          <p className="text-sm text-muted-foreground/60 mt-1">Ideal para: IPTV · gimnasios · hosting · academias · membresías · y más</p>
+          <p className="text-sm text-muted-foreground/60 mt-1">Ideal para negocios con clientes recurrentes: IPTV · gimnasios · hosting · academias · membresías · y más</p>
         </header>
 
         {/* Controls */}
