@@ -53,9 +53,13 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-5xl px-4 py-6 sm:py-8">
         {/* Header */}
-        <header className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl font-bold text-foreground">Recordatorios</h1>
-          <span className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-muted-foreground">Demo</span>
+        <header className="mb-6">
+          <div className="flex items-center justify-between">
+            <h1 className="text-2xl font-bold text-foreground">Recordatorios</h1>
+            <span className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-muted-foreground">Demo</span>
+          </div>
+          <p className="text-base text-muted-foreground mt-1">Gestiona vencimientos de pago y envía avisos de renovación por WhatsApp en segundos.</p>
+          <p className="text-sm text-muted-foreground/60 mt-1">Ideal para: IPTV · gimnasios · hosting · academias · membresías · y más</p>
         </header>
 
         {/* Controls */}
