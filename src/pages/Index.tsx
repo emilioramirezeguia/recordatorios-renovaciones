@@ -30,9 +30,9 @@ function filterSubscribers(data: Subscriber[], filter: FilterKey): Subscriber[] 
 }
 
 function getCounterText(filter: FilterKey, count: number): string {
-  if (filter === "vencidos") return `${count} suscripcion${count === 1 ? "" : "es"} vencida${count === 1 ? "" : "s"}`;
-  if (filter === "hoy") return `${count} suscripcion${count === 1 ? "" : "es"} vence${count === 1 ? "" : "n"} hoy`;
-  return `${count} suscripcion${count === 1 ? "" : "es"} por vencer`;
+  if (filter === "vencidos") return `${count} renovacion${count === 1 ? "" : "es"} vencida${count === 1 ? "" : "s"}`;
+  if (filter === "hoy") return `${count} renovacion${count === 1 ? "" : "es"} vence${count === 1 ? "" : "n"} hoy`;
+  return `${count} renovacion${count === 1 ? "" : "es"} pendiente${count === 1 ? "" : "s"}`;
 }
 
 const Index = () => {
@@ -98,7 +98,7 @@ const Index = () => {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Buscar suscriptor..."
+              placeholder="Buscar cliente..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full rounded-xl border border-input bg-card pl-10 pr-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
