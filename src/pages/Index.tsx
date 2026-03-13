@@ -30,9 +30,9 @@ function filterSubscribers(data: Subscriber[], filter: FilterKey): Subscriber[] 
 }
 
 function getCounterText(filter: FilterKey, count: number): string {
-  if (filter === "vencidos") return `${count} suscripcion${count === 1 ? "" : "es"} vencida${count === 1 ? "" : "s"}`;
-  if (filter === "hoy") return `${count} suscripcion${count === 1 ? "" : "es"} vence${count === 1 ? "" : "n"} hoy`;
-  return `${count} suscripcion${count === 1 ? "" : "es"} por vencer`;
+  if (filter === "vencidos") return `${count} renovacion${count === 1 ? "" : "es"} vencida${count === 1 ? "" : "s"}`;
+  if (filter === "hoy") return `${count} renovacion${count === 1 ? "" : "es"} vence${count === 1 ? "" : "n"} hoy`;
+  return `${count} renovacion${count === 1 ? "" : "es"} pendiente${count === 1 ? "" : "s"}`;
 }
 
 const Index = () => {
